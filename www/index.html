@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app='MetasApp'>
+<html>
 	<head>
 		<meta charset="utf-8" />
 		<meta name="format-detection" content="telephone=no" />
@@ -9,20 +9,61 @@
 		<!--link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.2.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme-1.4.2.min.css" /-->
 		<title>Metas</title>
+
+
+	    <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>		
+	    <script type="text/javascript" charset="utf-8">
+
+		    // Wait for device API libraries to load
+		    //
+		    function onLoad() {
+				document.addEventListener("online", onOnline, false);
+        		document.addEventListener("offline", onOffline, false);		    	
+		        document.addEventListener("deviceready", onDeviceReady, false);
+		    }
+		
+		    // device APIs are available
+		    //
+		    function onDeviceReady() {
+		        // Register the event listener
+		        console.log("pronto");
+		        alert("pronto");
+		        document.addEventListener("volumedownbutton", onVolumeDownKeyDown, false);
+		    }
+		
+		    // Handle the volume down button
+		    //
+		    function onVolumeDownKeyDown() {
+		    	console.log("volume down");
+		    	alert("xxx");
+		    }
+		    
+			function onOnline() {
+		        alert("onOnline");
+		    }
+		 
+		    function onOffline() {
+		        alert("onOffline");
+		    }		    
+	    	
+	    </script>
 	</head>
-	<body>
 
-		<div class="main" ng-controller='MainController'>
+  <body onload="onLoad()">
+		<h1>Aplicativo</h1>
+		
+		<!--div class="main" ng-controller='MainController'>
 			<ng-view />
-		</div>
+		</div-->
 
-		<script src="js/angular.min.js" type="text/javascript" charset="utf-8"></script>
+		<!-- script src="js/angular.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/angular-route.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/angular-locale_pt-br.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
-		<!--script src="js/jquery.mobile-1.4.2.min.js" type="text/javascript" charset="utf-8"></script-->
+		<script src="cordova.js" type="text/javascript" charset="utf-8"></script>
 		<script src="phonegap.js" type="text/javascript" charset="utf-8"></script>
-		<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/index.js" type="text/javascript" charset="utf-8"></script -->
+		<!--script src="js/jquery.mobile-1.4.2.min.js" type="text/javascript" charset="utf-8"></script-->
 	</body>
 </html>

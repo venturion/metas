@@ -27,9 +27,6 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
         document.addEventListener('deviceready', app.onDeviceReady, false);
-        document.addEventListener('volumedownbutton', app.onVolumeDownKeyDown, false);  
- 		document.addEventListener("batterystatus", app.onBatteryStatus, false);
-      
     },
     // deviceready Event Handler
     //
@@ -37,25 +34,64 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-		app.createContato();
+        
+		document.addEventListener("volumedownbutton", app.onVolumeDownKeyDown, false);
+ 		document.addEventListener("batterystatus", app.onBatteryStatus, false);
+ 		
+ 		var networkstate = navigator.connection.type;
+ 		
+ 		if(networkstate == "none"){
+ 			//app.showAlert("Offline", "Conexão");
+ 		}
+ 		else{
+ 			//app.showAlert("Online", "Conexão"); 			
+ 		}
+ 		        
+		app.findContatos();
     },
     
- 	createContato : function() {
-		var myContact = navigator.contacts.create({"displayName": "Test User"});
-        myContact.note = "This contact has a note.";
+ 	findContatos : function() {
+        var options = new ContactFindOptions();
+        //options.filter = "Bob";
+        var fields = ["displayName", "name"];
+        navigator.contacts.find(fields, onSuccess, onError, options);
     },
+
+    onSuccess: function(contacts) {
+    	app.showAlert("xxx", "yyy");
+        for (var i = 0; i < contacts.length; i++) {
+            $(".loading").append("Display Name = " + contacts[i].displayName);
+        }
+    },
+
+    onError: function(contactError) {
+        alert('onError!');
+    },    
     
+	addToContacts : function() {
+
+	    console.log('addToContacts');
+	    
+	    if (!navigator.contacts) {
+	        alert("Contacts API not supported", "Error");
+	        return;
+	    }
+	    
+	    var contact = navigator.contacts.create();
+	    contact.name = {givenName: "xxx", familyName: "yyy"};
+	    var phoneNumbers = [];
+	    phoneNumbers[0] = new ContactField('work', "2222222222", false);
+	    contact.phoneNumbers = phoneNumbers;
+	    contact.save();
+	    
+	    return false;
+	},
+        
     // Update DOM on a Received Event
     receivedEvent: function(id) {
-
-	    app.showAlert('Received Event: ' + id, 'Info');
-        
-        var percentage = "70";
-        
-        $(".loading").html(percentage + "%");
-			
+		alert(id);
     },
-    
+
   	onBatteryStatus : function(info) {
         app.showAlert("Level: " + info.level + " isPlugged: " + info.isPlugged, "Bateria");
     },    
@@ -67,12 +103,11 @@ var app = {
 	showAlert: function (message, title) {
 	    if (navigator.notification) {
 	        navigator.notification.alert(message, null, title, 'OK');
-	    } else {
+	    } 
+	    else {
 	        alert(title ? (title + ": " + message) : message);
 	    }
 	}          
 };
-
-
   
 app.initialize();

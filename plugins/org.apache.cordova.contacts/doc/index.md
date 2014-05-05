@@ -353,7 +353,7 @@ a `ContactAddress[]` array.
     // display the address information for all contacts
 
     function onSuccess(contacts) {
-        for (var i = 0; i < contacts.length; i++) {
+        for (var i = 0; i < navigator.contacts.length; i++) {
             for (var j = 0; j < contacts[i].addresses.length; j++) {
                 alert("Pref: "         + contacts[i].addresses[j].pref          + "\n" +
                     "Type: "           + contacts[i].addresses[j].type          + "\n" +
@@ -425,13 +425,13 @@ The `ContactError` object is returned to the user through the
 
 ### Constants
 
-- `ContactError.UNKNOWN_ERROR` (code 0)
-- `ContactError.INVALID_ARGUMENT_ERROR` (code 1)
-- `ContactError.TIMEOUT_ERROR` (code 2)
-- `ContactError.PENDING_OPERATION_ERROR` (code 3)
-- `ContactError.IO_ERROR` (code 4)
-- `ContactError.NOT_SUPPORTED_ERROR` (code 5)
-- `ContactError.PERMISSION_DENIED_ERROR` (code 20)
+- `ContactError.UNKNOWN_ERROR`
+- `ContactError.INVALID_ARGUMENT_ERROR`
+- `ContactError.TIMEOUT_ERROR`
+- `ContactError.PENDING_OPERATION_ERROR`
+- `ContactError.IO_ERROR`
+- `ContactError.NOT_SUPPORTED_ERROR`
+- `ContactError.PERMISSION_DENIED_ERROR`
 
 
 ## ContactField
@@ -537,7 +537,7 @@ Contains different kinds of information about a `Contact` object's name.
 ### Example
 
     function onSuccess(contacts) {
-        for (var i = 0; i < contacts.length; i++) {
+        for (var i = 0; i < navigator.contacts.length; i++) {
             alert("Formatted: "  + contacts[i].name.formatted       + "\n" +
                 "Family Name: "  + contacts[i].name.familyName      + "\n" +
                 "Given Name: "   + contacts[i].name.givenName       + "\n" +
@@ -628,7 +628,7 @@ properties.  A `Contact` object stores one or more
 ### Example
 
     function onSuccess(contacts) {
-        for (var i = 0; i < contacts.length; i++) {
+        for (var i = 0; i < navigator.contacts.length; i++) {
             for (var j = 0; j < contacts[i].organizations.length; j++) {
                 alert("Pref: "      + contacts[i].organizations[j].pref       + "\n" +
                     "Type: "        + contacts[i].organizations[j].type       + "\n" +

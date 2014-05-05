@@ -4,6 +4,12 @@
     <feature name="App">
         <param name="android-package" value="org.apache.cordova.App" />
     </feature>
+    <feature name="Battery">
+        <param name="android-package" value="org.apache.cordova.batterystatus.BatteryListener" />
+    </feature>
+    <feature name="Contacts">
+        <param name="android-package" value="org.apache.cordova.contacts.ContactManager" />
+    </feature>
     <name>Metas</name>
     <description>
         Conquiste suas metas com esse aplicativo.
@@ -59,4 +65,13 @@
     <gap:splash gap:platform="ios" height="768" src="res/screen/ios/screen-ipad-landscape.png" width="1024" />
     <gap:splash gap:platform="winphone" src="res/screen/windows-phone/screen-portrait.jpg" />
     <access origin="http://127.0.0.1*" />
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+	<feature name="Battery">
+	    <param name="android-package" value="org.apache.cordova.BatteryListener" />
+	</feature>    
+	<feature name="Contacts">
+	    <param name="android-package" value="org.apache.cordova.ContactManager" />
+	</feature>	
 </widget>

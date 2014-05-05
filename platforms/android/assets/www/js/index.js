@@ -29,7 +29,6 @@ var app = {
         document.addEventListener('deviceready', app.onDeviceReady, false);
         document.addEventListener('volumedownbutton', app.onVolumeDownKeyDown, false);  
  		document.addEventListener("batterystatus", app.onBatteryStatus, false);
-      
     },
     // deviceready Event Handler
     //
