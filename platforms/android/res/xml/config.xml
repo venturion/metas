@@ -68,10 +68,13 @@
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
-	<feature name="Battery">
-	    <param name="android-package" value="org.apache.cordova.BatteryListener" />
-	</feature>    
-	<feature name="Contacts">
-	    <param name="android-package" value="org.apache.cordova.ContactManager" />
-	</feature>	
+    <feature name="Battery">
+        <param name="android-package" value="org.apache.cordova.BatteryListener" />
+    </feature>
+    <feature name="Contacts">
+        <param name="android-package" value="org.apache.cordova.ContactManager" />
+    </feature>
+	<feature name="NetworkStatus">
+	    <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
+	</feature>
 </widget>

@@ -7,18 +7,16 @@
 		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
 		<!--link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.2.min.css" />
-		<link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme-1.4.2.min.css" /-->
+		<link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme-1.4.2.min.css" />
+		<script src="http://debug.phonegap.com/target/target-script-min.js#anonymous"></script-->
+		
 		<title>Metas</title>
-
-
 	    <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>		
 	    <script type="text/javascript" charset="utf-8">
-
+ 
 		    // Wait for device API libraries to load
 		    //
-		    function onLoad() {
-				document.addEventListener("online", onOnline, false);
-        		document.addEventListener("offline", onOffline, false);		    	
+		    function onLoad() { 	
 		        document.addEventListener("deviceready", onDeviceReady, false);
 		    }
 		
@@ -26,30 +24,73 @@
 		    //
 		    function onDeviceReady() {
 		        // Register the event listener
-		        console.log("pronto");
-		        alert("pronto");
-		        document.addEventListener("volumedownbutton", onVolumeDownKeyDown, false);
+		        //alert("pronto");
+		        
+				//window.addEventListener("online", onOnline, false);
+        		//window.addEventListener("offline", onOffline, false);		   	
+        		//window.addEventListener("batterycritical", onBatteryCritical, false);	        
+
+        		//window.addEventListener("volumedownbutton", onVolumeDownKeyDown, false);                	
+		        window.addEventListener("batterystatus", onBatteryStatus, false);	                		
+		                		        		
+        		//information();	
 		    }
-		
-		    // Handle the volume down button
-		    //
-		    function onVolumeDownKeyDown() {
-		    	console.log("volume down");
-		    	alert("xxx");
-		    }
+				
+			function information(){
+        		html = 'Device Name: '     + device.name     + '<br />' +
+                            'Device Cordova: '  + device.cordova  + '<br />' +
+                            'Device Platform: ' + device.platform + '<br />' +
+                            'Device UUID: '     + device.uuid     + '<br />' +
+                            'Device Model: '    + device.model    + '<br />' +
+                            'Device Version: '  + device.version  + '<br />';				
+                            alert(html);
+			}	
+
+			function onVolumeDownKeyDown() {
+        		alert("Volume Down!");
+    		}		    
 		    
+			function onBatteryCritical(info) {
+        		alert("Battery Level Critical " + info.level + "%\nRecharge Soon!");
+    		}		    
+
+			function onBatteryStatus(info) {
+			    // Handle the online event
+			    alert("Level: " + info.level + " isPlugged: " + info.isPlugged);
+			}
+		    
+			function checkConnection() {
+			    var networkState = navigator.connection.type;
+			
+			    var states = {};
+			    states[Connection.UNKNOWN]  = 'Unknown connection';
+			    states[Connection.ETHERNET] = 'Ethernet connection';
+			    states[Connection.WIFI]     = 'WiFi connection';
+			    states[Connection.CELL_2G]  = 'Cell 2G connection';
+			    states[Connection.CELL_3G]  = 'Cell 3G connection';
+			    states[Connection.CELL_4G]  = 'Cell 4G connection';
+			    states[Connection.CELL]     = 'Cell generic connection';
+			    states[Connection.NONE]     = 'No network connection';
+			
+			    alert('Connection type: ' + states[networkState]);
+			}
+
 			function onOnline() {
-		        alert("onOnline");
+				checkConnection();		    
+								
+		        //alert("onOnline");
 		    }
 		 
 		    function onOffline() {
-		        alert("onOffline");
+				checkConnection();		    		        
+		        
+		        //alert("onOffline");
 		    }		    
 	    	
 	    </script>
 	</head>
 
-  <body onload="onLoad()">
+  	<body onload="onLoad()">
 		<h1>Aplicativo</h1>
 		
 		<!--div class="main" ng-controller='MainController'>

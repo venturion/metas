@@ -8,14 +8,16 @@
             "/*": {
                 "<feature name=\"Battery\"><param name=\"android-package\" value=\"org.apache.cordova.batterystatus.BatteryListener\" /></feature>": 1,
                 "<feature name=\"Contacts\"><param name=\"android-package\" value=\"org.apache.cordova.contacts.ContactManager\" /></feature>": 1,
-                "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>": 1
+                "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>": 1,
+                "<feature name=\"NetworkStatus\"><param name=\"android-package\" value=\"org.apache.cordova.networkinformation.NetworkManager\" /></feature>": 1
             }
         },
         "AndroidManifest.xml": {
             "/*": {
                 "<uses-permission android:name=\"android.permission.READ_CONTACTS\" />": 1,
                 "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\" />": 1,
-                "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\" />": 1
+                "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\" />": 1,
+                "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />": 1
             }
         }
     },
@@ -30,6 +32,9 @@
             "PACKAGE_NAME": "com.fripixel.metas"
         },
         "org.apache.cordova.console": {
+            "PACKAGE_NAME": "com.fripixel.metas"
+        },
+        "org.apache.cordova.network-information": {
             "PACKAGE_NAME": "com.fripixel.metas"
         }
     },
