@@ -28,6 +28,13 @@
     <feature name="http://api.phonegap.com/1.0/media"/>
     <feature name="http://api.phonegap.com/1.0/network"/>
     <feature name="http://api.phonegap.com/1.0/notification"/>
+	
+	<plugin name="Device" value="org.apache.cordova.Device" />
+	<plugin name="Battery" value="org.apache.cordova.BatteryListener" />
+	<plugin name="Notification" value="org.apache.cordova.Notification"/>
+	<plugin name="Contacts" value="org.apache.cordova.ContactManager" />
+	<plugin name="Compass" value="org.apache.cordova.CompassListener" />
+	<plugin name="Geolocation" value="org.apache.cordova.GeoBroker" />
 
     <!--
         If you do not want any permissions to be added to your app, add the

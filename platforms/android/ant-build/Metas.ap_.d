@@ -28,8 +28,12 @@
 /opt/lampp/htdocs/metas/platforms/android/assets/www/index.html \
 /opt/lampp/htdocs/metas/platforms/android/assets/www/config.xml \
 /opt/lampp/htdocs/metas/platforms/android/assets/www/js \
+/opt/lampp/htdocs/metas/platforms/android/assets/www/plugins/org.apache.cordova.device \
 /opt/lampp/htdocs/metas/platforms/android/assets/www/plugins/org.apache.cordova.contacts \
 /opt/lampp/htdocs/metas/platforms/android/assets/www/plugins/org.apache.cordova.battery-status \
+/opt/lampp/htdocs/metas/platforms/android/assets/www/plugins/org.apache.cordova.network-information \
+/opt/lampp/htdocs/metas/platforms/android/assets/www/plugins/org.apache.cordova.device/www \
+/opt/lampp/htdocs/metas/platforms/android/assets/www/plugins/org.apache.cordova.device/www/device.js \
 /opt/lampp/htdocs/metas/platforms/android/assets/www/plugins/org.apache.cordova.contacts/src \
 /opt/lampp/htdocs/metas/platforms/android/assets/www/plugins/org.apache.cordova.contacts/www \
 /opt/lampp/htdocs/metas/platforms/android/assets/www/plugins/org.apache.cordova.contacts/src/windows8 \
@@ -44,6 +48,9 @@
 /opt/lampp/htdocs/metas/platforms/android/assets/www/plugins/org.apache.cordova.contacts/www/Contact.js \
 /opt/lampp/htdocs/metas/platforms/android/assets/www/plugins/org.apache.cordova.battery-status/www \
 /opt/lampp/htdocs/metas/platforms/android/assets/www/plugins/org.apache.cordova.battery-status/www/battery.js \
+/opt/lampp/htdocs/metas/platforms/android/assets/www/plugins/org.apache.cordova.network-information/www \
+/opt/lampp/htdocs/metas/platforms/android/assets/www/plugins/org.apache.cordova.network-information/www/network.js \
+/opt/lampp/htdocs/metas/platforms/android/assets/www/plugins/org.apache.cordova.network-information/www/Connection.js \
 /opt/lampp/htdocs/metas/platforms/android/assets/www/partials/create.html \
 /opt/lampp/htdocs/metas/platforms/android/assets/www/partials/main.html \
 /opt/lampp/htdocs/metas/platforms/android/assets/www/spec/lib \
@@ -119,9 +126,11 @@
 /opt/lampp/htdocs/metas/platforms/android/assets/www/res/screen/ios/screen-ipad-portrait-2x.png \
 /opt/lampp/htdocs/metas/platforms/android/assets/www/res/screen/ios/screen-ipad-landscape.png \
 /opt/lampp/htdocs/metas/platforms/android/assets/www/res/screen/tizen/README.md \
+/opt/lampp/htdocs/metas/platforms/android/assets/www/js/cordova.js \
 /opt/lampp/htdocs/metas/platforms/android/assets/www/js/angular-route.min.js \
 /opt/lampp/htdocs/metas/platforms/android/assets/www/js/angular.min.js \
 /opt/lampp/htdocs/metas/platforms/android/assets/www/js/index.js \
+/opt/lampp/htdocs/metas/platforms/android/assets/www/js/phonegap.js \
 /opt/lampp/htdocs/metas/platforms/android/assets/www/js/jquery.mobile-1.4.2.min.js \
 /opt/lampp/htdocs/metas/platforms/android/assets/www/js/app.js \
 /opt/lampp/htdocs/metas/platforms/android/assets/www/js/angular-locale_pt-br.js \
