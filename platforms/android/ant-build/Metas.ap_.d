@@ -20,7 +20,6 @@
 /opt/lampp/htdocs/metas/platforms/android/assets/www/icon.png \
 /opt/lampp/htdocs/metas/platforms/android/assets/www/spec.html \
 /opt/lampp/htdocs/metas/platforms/android/assets/www/img \
-/opt/lampp/htdocs/metas/platforms/android/assets/www/[br.com.fripixel].keystore \
 /opt/lampp/htdocs/metas/platforms/android/assets/www/cordova_plugins.js \
 /opt/lampp/htdocs/metas/platforms/android/assets/www/phonegap.js \
 /opt/lampp/htdocs/metas/platforms/android/assets/www/css \
@@ -126,11 +125,9 @@
 /opt/lampp/htdocs/metas/platforms/android/assets/www/res/screen/ios/screen-ipad-portrait-2x.png \
 /opt/lampp/htdocs/metas/platforms/android/assets/www/res/screen/ios/screen-ipad-landscape.png \
 /opt/lampp/htdocs/metas/platforms/android/assets/www/res/screen/tizen/README.md \
-/opt/lampp/htdocs/metas/platforms/android/assets/www/js/cordova.js \
 /opt/lampp/htdocs/metas/platforms/android/assets/www/js/angular-route.min.js \
 /opt/lampp/htdocs/metas/platforms/android/assets/www/js/angular.min.js \
 /opt/lampp/htdocs/metas/platforms/android/assets/www/js/index.js \
-/opt/lampp/htdocs/metas/platforms/android/assets/www/js/phonegap.js \
 /opt/lampp/htdocs/metas/platforms/android/assets/www/js/jquery.mobile-1.4.2.min.js \
 /opt/lampp/htdocs/metas/platforms/android/assets/www/js/app.js \
 /opt/lampp/htdocs/metas/platforms/android/assets/www/js/angular-locale_pt-br.js \
