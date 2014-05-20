@@ -25,13 +25,13 @@
         "org.apache.cordova.battery-status": {
             "PACKAGE_NAME": "com.fripixel.metas"
         },
+        "org.apache.cordova.console": {
+            "PACKAGE_NAME": "com.fripixel.metas"
+        },
         "org.apache.cordova.contacts": {
             "PACKAGE_NAME": "com.fripixel.metas"
         },
         "org.apache.cordova.device": {
-            "PACKAGE_NAME": "com.fripixel.metas"
-        },
-        "org.apache.cordova.console": {
             "PACKAGE_NAME": "com.fripixel.metas"
         },
         "org.apache.cordova.network-information": {
